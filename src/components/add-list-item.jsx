@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 class AddListItem extends React.Component {
   constructor (props) {
@@ -15,7 +16,7 @@ class AddListItem extends React.Component {
     })
   }
   addList (event) {
-    console.log(this.state.listItem)
+    axios.post('/list')
   }
   render () {
     return (

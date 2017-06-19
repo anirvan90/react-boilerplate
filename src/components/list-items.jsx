@@ -1,17 +1,18 @@
 import React from 'react'
-
+import Item from './item.jsx'
 class ListItems extends React.Component {
   constructor (props) {
     super(props)
   }
+
   render () {
     return (
       <div>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>
+        {
+          this.props.items.map((item) => {
+            return <Item key={item._id} item={item} />
+          })
+        }
       </div>
     )
   }
